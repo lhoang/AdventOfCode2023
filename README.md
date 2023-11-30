@@ -19,6 +19,13 @@ pnpm i -g zx
 chmod +x createDay.mjs
 ```
 
+Create a `cookie.mjs` with your http cookie.
+ex:
+
+```ts
+export const cookie = 'session=mycookie'
+```
+
 ## Fetch input and create new file for a daily challenge
 
 ```shell
