@@ -15,14 +15,14 @@
 // Add your own cookie in var cookie as `session=<my_http_cookie>`
 import { cookie } from './cookie.mjs'
 
-const year = '2022'
+const year = '2023'
 const url = `https://adventofcode.com/${year}/day/`
 $.verbose = false
 console.log('Create a new day structure')
 const dayAnswer = await question(chalk.green('Which day? '))
 const day = (+dayAnswer).toString().padStart(2, '0')
 
-const newDir = `./src/${year}/day${day}`
+const newDir = `./src/lib/${year}/day${day}`
 const alreadyExists = await fs.pathExists(newDir)
 
 if (Number.isNaN(day) || alreadyExists) {
@@ -39,7 +39,7 @@ await fs.ensureFile(filePath + '.ts')
 let testfile = filePath + '.spec.ts'
 await fs.ensureFile(testfile)
 
-const desc = `import { readFileAsLines, split } from '../../utils/input.js'
+const desc = `import { readFileAsLines, split } from '../../../utils/input.js'
 const realInput = readFileAsLines('${year}/day${day}/input.txt')
 
 const input = split\`

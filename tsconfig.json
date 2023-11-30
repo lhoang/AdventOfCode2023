@@ -1,11 +1,13 @@
 {
+  "extends": "./.svelte-kit/tsconfig.json",
   "compilerOptions": {
     "lib": ["esnext", "DOM"],
+    "module": "es2022",
     "target": "esnext",
     "types": ["node", "vitest/globals"],
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "moduleResolution": "Node",
+    "moduleResolution": "bundler",
     "baseUrl": ".",
     "resolveJsonModule": true,
     "strict": true,

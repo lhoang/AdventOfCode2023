@@ -31,3 +31,9 @@ export const cookie = 'session=mycookie'
 ```shell
 ./createDay.mjs
 ```
+
+## Bonus, Svelte 5 beta for visualizations
+
+```shell
+pnpm run dev
+```

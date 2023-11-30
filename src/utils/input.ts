@@ -17,7 +17,7 @@ export function readFileAsLines(filename: string): Array<string> {
  */
 export function readFile(filename: string): string {
   const __dirname = path.dirname(new URL(import.meta.url).pathname)
-  return fs.readFileSync(path.resolve(__dirname, '..', filename), {
+  return fs.readFileSync(path.resolve(__dirname, '../lib', filename), {
     encoding: 'utf-8',
   })
 }
@@ -52,7 +52,7 @@ export function splitByEmptyLine(arr: Array<string>): Array<Array<string>> {
         }
         return acc
       },
-      [[]],
+      [[] as string[]],
     )
     .filter(d => d.length)
 }
