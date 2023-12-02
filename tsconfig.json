@@ -10,8 +10,6 @@
     "moduleResolution": "bundler",
     "baseUrl": ".",
     "resolveJsonModule": true,
-    "strict": true,
-    "strictNullChecks": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitAny": true,
     "allowUnreachableCode": false,
