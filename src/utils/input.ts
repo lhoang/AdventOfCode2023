@@ -1,7 +1,6 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import dedent from 'dedent-js'
-import { performance } from 'node:perf_hooks'
 
 /**
  * Read file as array of lines
@@ -55,17 +54,4 @@ export function splitByEmptyLine(arr: Array<string>): Array<Array<string>> {
       [[] as string[]],
     )
     .filter(d => d.length)
-}
-
-export function time(wrapped: () => void, second = false) {
-  let unit = 'ms'
-  let div = 1
-  if (second) {
-    unit = 's'
-    div = 1000
-  }
-  const startTime = performance.now()
-  wrapped()
-  const endTime = performance.now()
-  console.log(`Time: ${(endTime - startTime) / div} ${unit}`)
 }
